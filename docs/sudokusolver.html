@@ -159,7 +159,7 @@ pip <span class="hljs-keyword">install</span> numpy
             <pre><code class="lang-commandline">pip <span class="hljs-keyword">install</span> xxx
 </code></pre>
             <h3 id="-">运行</h3>
-            <p>直接点击<code>start.bat</code>，根据提示选择使用<code>CLI</code>或者<code>GUI</code>。</p>
+            <p>直接点击<code>start.bat</code>，根据提示选择使用<code>CLI</code>(目前<code>CLI</code>的功能发生变化，请使用<code>GUI</code>)或者<code>GUI</code>。</p>
             <h3 id="cli-">CLI运行过程</h3>
             <ol>
                 <li>运行时会先加载数据，这会花费一段时间，等到程序输出<code>Input the path of the sudoku image:</code>时，请输入数独图片的文件路径，然后等待程序运行（可能会花费一段时间），最后会格式化输出数独识别结果</li>
@@ -438,14 +438,22 @@ Epoch <span class="hljs-number">100</span>/<span class="hljs-number">100</span>
                 <li>如果数独正确解出，程序会自动创建解题报告，点击<code>detail</code>按钮即可查看解题报告。</li>
                 <li>菜单栏<code>File</code>中的<code>Open</code>按钮可以打开一个数独图片，效果和拖动图片相同，<code>Save</code>按钮可以将解出的数独保存（即将实现），<code>options</code>中的<code>train</code>按钮可以根据训练数据重新训练模型。</li>
                 <li>新增了<code>settings</code>和<code>style</code>两个按钮，你可以自定义程序设置以及界面风格。</li>
+                <li>点击<code>Update</code>按钮时，程序将会自动检查是否有新版本的数据集下载，然后自动替换替换磁盘上的训练数据为最新数据。</li>
+            </ol>
+            <h3 id="gui-">设置简介</h3>
+            <p>注意：所有设置只对<code>GUI</code>模式有效</p>
+            <ol>
+                <li><code>auto-train</code>是否为<code>true</code>表示程序是否自己选择合适的训练时机，训练时会自动开始，不会通知用户。</li>
+                <li><code>auto-update</code>是否为<code>true</code>表示程序是否自动更新训练数据，程序更新数据时会提示用户。</li>
+                <li>请不要更改含有<code>-read-only</code>后缀的选项，他们由程序用来判断合适的执行不同自动化操作的时机。</li>
             </ol>
             <h3 id="-">注意事项</h3>
             <ol>
-                <li>训练结果里面的<code>val_accuracy</code>会比较低（&lt; 95％），这是正常现象，因为模型的训练集和测试集都不典型，但是识别数独图片成功率不会很低</li>
-                <li>训练用的数独图片的字体尽可能相似，否则可能会降低准确率，字体参考<code>https://5b0988e595225.cdn.sohucs.com/images/20171008/4b7e783b0d7f4d8995bef6ab1df8b8a9.jpeg</code></li>
+                <li>训练结果里面的<code>val_accuracy</code>会很高（100％），这是正常现象，因为模型的训练集和测试集的字体十分接近，但是识别数独图片成功率可能不是100％。</li>
+                <li>训练用的数独图片的字体尽可能相似，否则可能会降低准确率，字体参考<code>https://5b0988e595225.cdn.sohucs.com/images/20171008/4b7e783b0d7f4d8995bef6ab1df8b8a9.jpeg</code>。</li>
                 <li>大概每找出50-100个错误就差不多可以训练一次（如果开启自动训练模式则不必考虑此项）。</li>
                 <li>在GUI模式下，如果开启自动更新，程序将会自动保持训练集和测试集为最新状态，这意味者原来的训练数据会丢失，但可能提高准确率。</li>
-                <li>最新版本数据集<span id="update">2.0.0</span>: <a href="data.zip">立刻获得</a></li>
+                <li>最新版本数据集<span id="update">2.0.0</span>: <a href="data.zip">立刻下载!</a></li>
             </ol>
 
         </div>
