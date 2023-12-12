@@ -10,20 +10,20 @@
     <script type="module"
         src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.0/dist/cdn/material-dynamic-colors.min.js">
     </script>
-    <script>
-    </script>
+    <script src="assets/js/index.js"></script>
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
 <body>
-    <nav class="blur m l left">
+    <nav class="m l left">
         <header>
-            <img class="circle" src="/favicon.png">
+            <a href="https://scteenmastan.github.io"><img class="circle" src="/favicon.png"></a>
         </header>
-        <a>
-            <i>home</i>
-            <span>Install</span>
-        </a>
         <a class="active">
+            <i>home</i>
+            <span>Home</span>
+        </a>
+        <a>
             <i>widgets</i>
             <span>Explore</span>
         </a>
@@ -35,26 +35,87 @@
             <i>arrow_forward</i>
             <span>Right</span>
         </a>
-        <a>
-            <i>code</i>
-            <span>Code</span>
-        </a>
-        <a onclick="document.querySelector('body').classList.toggle('dark')">
-            <i>brightness_4</i>
-            <span>Theme</span>
+        <a onclick="document.querySelector('#palette_desktop').classList.toggle('active')">
+            <i>palette</i>
+            <span>Palette</span>
         </a>
     </nav>
-    <main class="responsive max">
-        <button onclick="document.querySelector('#cookie').show()">Click me!</button>
-        <dialog id="cookie">
-            <h3><i>lightbulb_outline</i>Hi, there!</h3>
-            <nav class="center-align">
-                <button onclick="this.parentElement.parentElement.close()">Close</button>
-                <button onclick="this.parentElement.parentElement.close()">Accept</button>
+
+    <nav class="s up">
+        <header>
+            <a href="https://scteenmastan.github.io"><img class="circle" src="/favicon.png"></a>
+        </header>
+        <a class="active vertical">
+            <i>home</i>
+            <span>Home</span>
+        </a>
+        <a class="vertical">
+            <i>widgets</i>
+            <span>Explore</span>
+        </a>
+        <a class="vertical">
+            <i>arrow_back</i>
+            <span>Left</span>
+        </a>
+        <a class="vertical">
+            <i>arrow_forward</i>
+            <span>Right</span>
+        </a>
+        <a onclick="document.querySelector('#palette_mobile').classList.toggle('active')" class="vertical">
+            <i>palette</i>
+            <span>Palette</span>
+        </a>
+    </nav>
+
+    <dialog id="palette_desktop" class="left">
+        <h4>Theme Control</h4>
+        <div class="center-align">
+            <button class="extra">
+                <i>palette</i>
+                <span>Hex Source Color</span>
+                <input type="color">
+            </button>
+            <nav class="no-space">
+                <button class="border left-round max" onclick="changeMode(this)">
+                    <i class="small">dark_mode</i>
+                    <span>Dark</span>
+                </button>
+                <button class="border right-round max fill" onclick="changeMode(this)">
+                    <i class="small">light_mode</i>
+                    <span>Light</span>
+                </button>
             </nav>
-        </dialog>
+        </div>
+        <nav class="right-align">
+            <button class="border"
+                onclick="this.parentElement.parentElement.classList.toggle('active')">Confirm</button>
+        </nav>
+    </dialog>
+
+    <dialog id="palette_mobile" class="bottom">
+        <h5>Up</h5>
+        <div>Some text here</div>
+        <nav class="right-align">
+            <button class="border">Cancel</button>
+            <button>Confirm</button>
+        </nav>
+    </dialog>
+
+    <main class="responsive max">
+        <div id="introduction" class="center-align">
+            <h1 class="center-align large-padding" id="title">Hi, there!</h1>
+            <p class="center-align extra">
+                This is my homepage website. <br>
+                Enjoy your stay!
+            </p>
+            <button class="extra blue8 large-margin">Get Started</button>
+        </div>
+
+        <div id="news" class="center-align">
+            <h2 class="large-padding top-margin">News & launches</h2>
+        </div>
     </main>
-    
+
 </body>
 
 </html>
