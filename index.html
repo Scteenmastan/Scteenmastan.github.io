@@ -17,7 +17,7 @@
 <body>
     <nav class="m l left">
         <header>
-            <a href="https://scteenmastan.github.io"><img class="circle" src="/favicon.png"></a>
+            <a href="https://scteenmastan.github.io"><img class="circle" src="assets/img/favicon.png"></a>
         </header>
         <a class="active">
             <i>home</i>
@@ -43,7 +43,7 @@
 
     <nav class="s up">
         <header>
-            <a href="https://scteenmastan.github.io"><img class="circle" src="/favicon.png"></a>
+            <a href="https://scteenmastan.github.io"><img class="circle" src="assets/img/favicon.png"></a>
         </header>
         <a class="active vertical">
             <i>home</i>
@@ -73,7 +73,7 @@
             <button class="extra">
                 <i>palette</i>
                 <span>Hex Source Color</span>
-                <input type="color">
+                <input type="color" onchange="changeTheme(this)">
             </button>
             <nav class="no-space">
                 <button class="border left-round max" onclick="changeMode(this)">
@@ -93,22 +93,38 @@
     </dialog>
 
     <dialog id="palette_mobile" class="bottom">
-        <h5>Up</h5>
-        <div>Some text here</div>
+        <h4>Theme Control</h4>
+        <div class="center-align">
+            <button class="extra">
+                <i>palette</i>
+                <span>Hex Source Color</span>
+                <input type="color" onchange="changeTheme(this)">
+            </button>
+            <nav class="no-space">
+                <button class="border left-round max" onclick="changeMode(this)">
+                    <i class="small">dark_mode</i>
+                    <span>Dark</span>
+                </button>
+                <button class="border right-round max fill" onclick="changeMode(this)">
+                    <i class="small">light_mode</i>
+                    <span>Light</span>
+                </button>
+            </nav>
+        </div>
         <nav class="right-align">
-            <button class="border">Cancel</button>
-            <button>Confirm</button>
+            <button class="border"
+                onclick="this.parentElement.parentElement.classList.toggle('active')">Confirm</button>
         </nav>
     </dialog>
 
     <main class="responsive max">
-        <div id="introduction" class="center-align">
+        <div id="introduction" class="center-align round large-padding">
             <h1 class="center-align large-padding" id="title">Hi, there!</h1>
-            <p class="center-align extra">
+            <p class="center-align">
                 This is my homepage website. <br>
                 Enjoy your stay!
             </p>
-            <button class="extra blue8 large-margin">Get Started</button>
+            <button class="large-margin">Get started</button>
         </div>
 
         <div id="news" class="center-align">

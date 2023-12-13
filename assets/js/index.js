@@ -5,11 +5,15 @@ function changeMode(self) {
         for (let i of self.parentElement.children) {
             i.classList.toggle("fill");
         }
-        if (self.classList.contains("dark")) {
-            document.querySelector("#introduction").style.backgroundImage = "url('assets/img/homepage-dark.jpg')";
+        if (element.classList.contains("dark")) {
+            document.querySelector("#introduction").style.backgroundImage = 'url("assets/img/homepage-dark.jpg")';
         }
         else {
-            document.querySelector("#introduction").style.backgroundImage = "url('assets/img/homepage.jpg')";
+            document.querySelector("#introduction").style.backgroundImage = 'url("assets/img/homepage.jpg")';
         }
     }
+}
+
+async function changeTheme(self) {
+    let theme = await ui("theme", self.value);
 }

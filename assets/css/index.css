@@ -6,7 +6,18 @@
 #introduction {
     background-image: url("../img/homepage.jpg");
     background-size: cover;
-    border-radius: 2em;
+}
+
+#introduction button {
+    font-size: 1.6em;
+    width: 9rem;
+    height: 5rem;
+    padding: 0 2.45rem;
+    border-radius: 4rem;
+}
+
+#introduction p {
+    font-size: 1.6em;
 }
 
 p {
