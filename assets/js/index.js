@@ -13,7 +13,3 @@ function changeMode(self) {
         }
     }
 }
-
-async function changeTheme(self) {
-    let theme = await ui("theme", self.value);
-}

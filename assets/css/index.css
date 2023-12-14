@@ -23,3 +23,9 @@
 p {
     font-size: 1.5em;
 }
+
+#theme_color_desktop, #theme_color_mobile {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+}
