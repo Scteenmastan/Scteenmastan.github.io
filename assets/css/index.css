@@ -29,3 +29,41 @@ p {
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
 }
+
+#footer {
+    margin-top: 2rem;
+}
+
+#footer a {
+    color: rgb(11, 87, 208);
+}
+
+#footer a:hover {
+    color: #051d49;
+    text-decoration: underline;
+}
+
+#footer dialog a::before {
+    content: "◉";
+    margin-right: 0.5rem;
+}
+
+#news article p {
+    font-size: medium;
+}
+
+#news article img {
+    height: 12em;
+}
+
+#news article {
+    border: #eee;
+    background-color: #eee;
+    transition: 0.3s;
+}
+
+#news article:hover {
+    background-color: #c2e7ff;
+    transition: 0.3s;
+    cursor: pointer;
+}

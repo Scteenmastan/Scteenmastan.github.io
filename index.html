@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Material</title>
+    <title>Scteenmaprin</title>
     <link href="https://cdn.jsdelivr.net/npm/beercss@3.4.9/dist/cdn/beer.min.css" rel="stylesheet">
     <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.4.9/dist/cdn/beer.min.js"></script>
     <script type="module"
@@ -94,7 +94,7 @@
                 <button class="circle small black"></button>
             </nav>
             <nav class="no-space">
-                <button class="border left-round max" onclick="changeMode(this)">
+                <button class="border left-round max" onclick="alert('Dark mode is temporarily unavailable')">
                     <i class="small">dark_mode</i>
                     <span>Dark</span>
                 </button>
@@ -160,14 +160,60 @@
                 This is my homepage website. <br>
                 Enjoy your stay!
             </p>
-            <button class="large-margin">Get started</button>
+            <button class="large-margin" onclick="window.open('assets/page/', '_self')">Get started</button>
         </div>
 
-        <div id="news" class="center-align">
+        <div id="news">
             <h2 class="large-padding top-margin">News & launches</h2>
+            <div class="grid">
+                <div class="s12 m6 l6">
+                    <article class="no-padding round border" onclick="window.open('assets/page/blog/id1.html', '_self')">
+                        <img class="responsive top-round" src="assets/img/whatsnew.png">
+                        <div class="padding">
+                            <h5>What's new</h5>
+                            <p>This website is based on Beer CSS, a CSS framework
+                                that is based on Material Design.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="s12 m6 l6">
+                    <article class="no-padding round border" onclick="window.open('assets/page/blog/id2.html', '_self')">
+                        <img class="responsive top-round" src="assets/img/newrlease.png">
+                        <div class="padding">
+                            <h5>New release</h5>
+                            <p>This is a new release version of the website.
+                                Enjoy your stay here and have fun!</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="footer" class="right-align">
+            <a onclick="document.querySelector('#acknowledgements').classList.toggle('active')">
+                Acknowledgements<i class="tiny">open_in_new</i>
+            </a>
+            <dialog id="acknowledgements">
+                <h4>Acknowledgements</h4>
+                <div class="left-align column">
+                    This page is powered by:
+                    <div>
+                        <a href="https://m3.material.io/">Material Design<i class="tiny">open_in_new</i></a>
+                    </div>
+                    <div>
+                        <a href="https://www.beercss.com/">Beer CSS<i class="tiny">open_in_new</i></a>
+                    </div>
+                    <div>
+                        <a href="https://fonts.google.com/">Google Fonts<i class="tiny">open_in_new</i></a>
+                    </div>
+                </div>
+                <nav class="right-align">
+                    <button class="border"
+                        onclick="this.parentElement.parentElement.classList.toggle('active')">OK</button>
+                </nav>
+            </dialog>
         </div>
     </main>
-
 </body>
-
 </html>
